@@ -1,6 +1,6 @@
-﻿namespace covid19
+namespace covid19
 {
-    partial class Form1
+    partial class frmPatients
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,200 +28,204 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            comboBox1 = new ComboBox();
-            button3 = new Button();
-            button4 = new Button();
-            checkBox1 = new CheckBox();
-            label1 = new Label();
-            label2 = new Label();
-            button5 = new Button();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            txtName = new TextBox();
+            txtCountry = new TextBox();
+            txtIdNo = new TextBox();
+            cmbGender = new ComboBox();
+            btnNew = new Button();
+            btnDelete = new Button();
+            chkIsActive = new CheckBox();
+            lblName = new Label();
+            lblCountry = new Label();
+            btnSave = new Button();
+            lblIdNo = new Label();
+            lblDob = new Label();
+            lblGender = new Label();
+            dtpDob = new DateTimePicker();
             SuspendLayout();
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.AccessibleName = "txtName";
-            textBox1.Location = new Point(272, 45);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(169, 31);
-            textBox1.TabIndex = 0;
+            txtName.AccessibleName = "txtName";
+            txtName.Location = new Point(272, 45);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(169, 31);
+            txtName.TabIndex = 0;
+            txtName.TextChanged += txtName_TextChanged;
             // 
-            // textBox2
+            // txtCountry
             // 
-            textBox2.AccessibleName = "txt.country";
-            textBox2.Location = new Point(264, 253);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(177, 31);
-            textBox2.TabIndex = 1;
+            txtCountry.AccessibleName = "txt.country";
+            txtCountry.Location = new Point(264, 253);
+            txtCountry.Name = "txtCountry";
+            txtCountry.Size = new Size(177, 31);
+            txtCountry.TabIndex = 1;
             // 
-            // textBox3
+            // txtIdNo
             // 
-            textBox3.AccessibleName = "txtidno";
-            textBox3.Location = new Point(272, 82);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(169, 31);
-            textBox3.TabIndex = 2;
+            txtIdNo.AccessibleName = "txtidno";
+            txtIdNo.Location = new Point(272, 82);
+            txtIdNo.Name = "txtIdNo";
+            txtIdNo.Size = new Size(169, 31);
+            txtIdNo.TabIndex = 2;
             // 
-            // comboBox1
+            // cmbGender
             // 
-            comboBox1.AccessibleName = "txtgender";
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(264, 202);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(177, 33);
-            comboBox1.TabIndex = 4;
+            cmbGender.AccessibleName = "txtgender";
+            cmbGender.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbGender.FormattingEnabled = true;
+            cmbGender.Items.AddRange(new object[] { "Male", "Female" });
+            cmbGender.Location = new Point(264, 202);
+            cmbGender.Name = "cmbGender";
+            cmbGender.Size = new Size(177, 33);
+            cmbGender.TabIndex = 4;
             // 
-            // button3
+            // btnNew
             // 
-            button3.AccessibleName = "namebtn";
-            button3.Location = new Point(339, 364);
-            button3.Name = "button3";
-            button3.Size = new Size(115, 41);
-            button3.TabIndex = 7;
-            button3.Text = "new";
-            button3.UseVisualStyleBackColor = true;
+            btnNew.AccessibleName = "namebtn";
+            btnNew.Location = new Point(339, 364);
+            btnNew.Name = "btnNew";
+            btnNew.Size = new Size(115, 41);
+            btnNew.TabIndex = 7;
+            btnNew.Text = "new";
+            btnNew.UseVisualStyleBackColor = true;
+            btnNew.Click += btnNew_Click;
             // 
-            // button4
+            // btnDelete
             // 
-            button4.AccessibleName = "delete";
-            button4.Location = new Point(569, 364);
-            button4.Name = "button4";
-            button4.Size = new Size(115, 41);
-            button4.TabIndex = 8;
-            button4.Text = "delete";
-            button4.UseVisualStyleBackColor = true;
+            btnDelete.AccessibleName = "delete";
+            btnDelete.Location = new Point(569, 364);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(115, 41);
+            btnDelete.TabIndex = 8;
+            btnDelete.Text = "delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // checkBox1
+            // chkIsActive
             // 
-            checkBox1.AccessibleName = "isActive";
-            checkBox1.AutoSize = true;
-            checkBox1.Checked = true;
-            checkBox1.CheckState = CheckState.Checked;
-            checkBox1.Location = new Point(123, 298);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(98, 29);
-            checkBox1.TabIndex = 9;
-            checkBox1.Text = "isActive";
-            checkBox1.UseVisualStyleBackColor = true;
+            chkIsActive.AccessibleName = "isActive";
+            chkIsActive.AutoSize = true;
+            chkIsActive.Checked = true;
+            chkIsActive.CheckState = CheckState.Checked;
+            chkIsActive.Location = new Point(123, 298);
+            chkIsActive.Name = "chkIsActive";
+            chkIsActive.Size = new Size(98, 29);
+            chkIsActive.TabIndex = 9;
+            chkIsActive.Text = "isActive";
+            chkIsActive.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblName
             // 
-            label1.AccessibleName = "name";
-            label1.AutoSize = true;
-            label1.Location = new Point(113, 51);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 25);
-            label1.TabIndex = 10;
-            label1.Text = "Name";
-            label1.Click += label1_Click;
+            lblName.AccessibleName = "name";
+            lblName.AutoSize = true;
+            lblName.Location = new Point(113, 51);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(59, 25);
+            lblName.TabIndex = 10;
+            lblName.Text = "Name";
             // 
-            // label2
+            // lblCountry
             // 
-            label2.AccessibleName = "country";
-            label2.AutoSize = true;
-            label2.Location = new Point(113, 234);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 25);
-            label2.TabIndex = 11;
-            label2.Text = "country";
+            lblCountry.AccessibleName = "country";
+            lblCountry.AutoSize = true;
+            lblCountry.Location = new Point(113, 234);
+            lblCountry.Name = "lblCountry";
+            lblCountry.Size = new Size(72, 25);
+            lblCountry.TabIndex = 11;
+            lblCountry.Text = "country";
             // 
-            // button5
+            // btnSave
             // 
-            button5.AccessibleName = "save";
-            button5.Location = new Point(189, 355);
-            button5.Name = "button5";
-            button5.Size = new Size(115, 41);
-            button5.TabIndex = 12;
-            button5.Text = "save";
-            button5.UseVisualStyleBackColor = true;
+            btnSave.AccessibleName = "save";
+            btnSave.Location = new Point(189, 355);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(115, 41);
+            btnSave.TabIndex = 12;
+            btnSave.Text = "save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
-            // label3
+            // lblIdNo
             // 
-            label3.AccessibleName = "idno";
-            label3.AutoSize = true;
-            label3.Location = new Point(123, 97);
-            label3.Name = "label3";
-            label3.Size = new Size(54, 25);
-            label3.TabIndex = 13;
-            label3.Text = "IDNo";
+            lblIdNo.AccessibleName = "idno";
+            lblIdNo.AutoSize = true;
+            lblIdNo.Location = new Point(123, 97);
+            lblIdNo.Name = "lblIdNo";
+            lblIdNo.Size = new Size(54, 25);
+            lblIdNo.TabIndex = 13;
+            lblIdNo.Text = "IDNo";
             // 
-            // label4
+            // lblDob
             // 
-            label4.AccessibleName = "dob";
-            label4.AutoSize = true;
-            label4.Location = new Point(123, 135);
-            label4.Name = "label4";
-            label4.Size = new Size(49, 25);
-            label4.TabIndex = 14;
-            label4.Text = "DOB";
+            lblDob.AccessibleName = "dob";
+            lblDob.AutoSize = true;
+            lblDob.Location = new Point(123, 135);
+            lblDob.Name = "lblDob";
+            lblDob.Size = new Size(49, 25);
+            lblDob.TabIndex = 14;
+            lblDob.Text = "DOB";
             // 
-            // label5
+            // lblGender
             // 
-            label5.AccessibleName = "gender";
-            label5.AutoSize = true;
-            label5.Location = new Point(116, 185);
-            label5.Name = "label5";
-            label5.Size = new Size(69, 25);
-            label5.TabIndex = 15;
-            label5.Text = "Gender";
+            lblGender.AccessibleName = "gender";
+            lblGender.AutoSize = true;
+            lblGender.Location = new Point(116, 185);
+            lblGender.Name = "lblGender";
+            lblGender.Size = new Size(69, 25);
+            lblGender.TabIndex = 15;
+            lblGender.Text = "Gender";
             // 
-            // dateTimePicker1
+            // dtpDob
             // 
-            dateTimePicker1.AccessibleName = "txtdateofbirth";
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(272, 129);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(169, 31);
-            dateTimePicker1.TabIndex = 16;
+            dtpDob.AccessibleName = "txtdateofbirth";
+            dtpDob.Format = DateTimePickerFormat.Short;
+            dtpDob.Location = new Point(272, 129);
+            dtpDob.Name = "dtpDob";
+            dtpDob.Size = new Size(169, 31);
+            dtpDob.TabIndex = 16;
             // 
-            // Form1
+            // frmPatients
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(button5);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(checkBox1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Name = "Form1";
+            Controls.Add(dtpDob);
+            Controls.Add(lblGender);
+            Controls.Add(lblDob);
+            Controls.Add(lblIdNo);
+            Controls.Add(btnSave);
+            Controls.Add(lblCountry);
+            Controls.Add(lblName);
+            Controls.Add(chkIsActive);
+            Controls.Add(btnDelete);
+            Controls.Add(btnNew);
+            Controls.Add(cmbGender);
+            Controls.Add(txtIdNo);
+            Controls.Add(txtCountry);
+            Controls.Add(txtName);
+            Name = "frmPatients";
             Text = "patientsForm";
-            Load += Form1_Load;
+            Load += frmPatients_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private ComboBox comboBox1;
-        private Button button3;
-        private Button button4;
-        private CheckBox checkBox1;
-        private Label label1;
-        private Label label2;
-        private Button button5;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private DateTimePicker dateTimePicker1;
+        private TextBox txtName;
+        private TextBox txtCountry;
+        private TextBox txtIdNo;
+        private ComboBox cmbGender;
+        private Button btnNew;
+        private Button btnDelete;
+        private CheckBox chkIsActive;
+        private Label lblName;
+        private Label lblCountry;
+        private Button btnSave;
+        private Label lblIdNo;
+        private Label lblDob;
+        private Label lblGender;
+        private DateTimePicker dtpDob;
     }
 }
